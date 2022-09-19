@@ -1,0 +1,8 @@
+#
+# Container Image CFSSL
+#
+
+etc/cfssl/ca-cer.pem binary
+etc/cfssl/ca-key.pem binary
+etc/cfssl/tls-cer.pem binary
+etc/cfssl/tls-key.pem binary

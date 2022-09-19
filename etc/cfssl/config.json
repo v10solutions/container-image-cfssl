@@ -1,0 +1,20 @@
+{
+	"signing": {
+		"default": {
+			"expiry": "9528h",
+			"ocsp_url": "http://sentinel.ca.v10.solutions"
+		},
+		"profiles": {
+			"server": {
+				"expiry": "9528h",
+				"copy_extensions": true,
+				"usages": [
+					"digital signature",
+					"key encipherment",
+					"server auth",
+					"client auth"
+				]
+			}
+		}
+	}
+}

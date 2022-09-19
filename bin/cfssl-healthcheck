@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# Container Image CFSSL
+#
+
+set -o "errexit"
+set -o "nounset"
+set -o "pipefail"
+
+curl \
+	-L \
+	-f \
+	-s \
+	-S \
+	-m "${2}" \
+	--retry "1" \
+	--cacert "/usr/local/etc/cfssl/ca-cer.pem" \
+	"https://$(hostname -f):${1}/api/v1/cfssl/health" \
+| jq -e ".result.healthy == true" \
+| tr -d "\n"
